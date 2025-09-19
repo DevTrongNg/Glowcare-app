@@ -12,3 +12,7 @@ const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+
+
+// const cors = require("cors");
+// app.use(cors());
