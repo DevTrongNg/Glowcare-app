@@ -47,18 +47,31 @@ const ProductsPage = (props: Props) => {
         key: product._id,
         ...product,
     }));
+
+
+
     // Định nghĩa các cột truyền vào table
     const columns = [
         { key: "name", dataIndex: "name", title: "Tên" },
         { key: "price", dataIndex: "price", title: "Giá" },
-        { key: "quantity", dataIndex: "quantity", title: "Số lượng" },
+        { key: "category", dataIndex: "category", title: "danh mục" },
+        { key: "price", dataIndex: "price", title: "giá" },
+        { key: "image", dataIndex: "image", title: "ảnh" },
+        { key: "gallery", dataIndex: "gallery", title: "ảnh con" },
+        { key: "description", dataIndex: "description", title: "mô tả" },
+        { key: "discount", dataIndex: "discount", title: "giảm giá" },
+        { key: "tags", dataIndex: "tags", title: "thẻ" },
+        { key: "attributes", dataIndex: "attributes", title: "thuộc tính" },
         {
             key: "featured",
             dataIndex: "featured",
             title: "Nổi bật",
             render: (_: any, product: IProduct) => <span>{product.featured ? "Có" : "không"}</span>,
         },
-        { key: "countInStock", dataIndex: "countInStock", title: "Tình trạng" },
+        { key: "countInStock", dataIndex: "countInStock", title: "số lượng tồn kho" },
+
+
+
         {
             key: "actions",
             render: (_: any, product: any) => {
@@ -100,10 +113,4 @@ const ProductsPage = (props: Props) => {
 
 export default ProductsPage;
 
-/**
- * SERVER ( API )
- * | - GET/products
- * setState
- * |
- * render
- */
+
